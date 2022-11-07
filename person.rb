@@ -10,7 +10,7 @@ class Person
   end
 
   # returns true if the person is of age 18 and above
-  def is_of_age?
+  def of_age?
     @age >= 18
   end
 
