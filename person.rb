@@ -1,4 +1,4 @@
-class Person 
+class Person
   attr_accessor :id, :name, :age
 
   # Constructor and getters and setters
@@ -22,4 +22,3 @@ class Person
   private :is_of_age?
   public :can_use_services?
 end
-
