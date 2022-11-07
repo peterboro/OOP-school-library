@@ -1,5 +1,6 @@
 class Person
-  attr_accessor :id, :name, :age
+  attr_accessor :name, :age
+  attr_reader :id
 
   # Constructor and getters and setters
   def initialize(age, name: 'Unknown', parent_permission: true)
@@ -10,9 +11,11 @@ class Person
   end
 
   # returns true if the person is of age 18 and above
-  def of_age?
+  # rubocop:disable Naming/PredicateName
+  def is_of_age?
     @age >= 18
   end
+  # rubocop:enable Naming/PredicateName
 
   # returns true if person has permission from parents and is of age
   def can_use_services?
