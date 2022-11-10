@@ -16,8 +16,9 @@ class Person < Nameable
     @rentals = []
   end
 
-  def add_rental(date, book)
-    Rental.new(date, book, self)
+  def add_rental(rental)
+    @rentals.push(rental)
+    @rental.person = self
   end
 
   # returns true if the person is of age 18 and above
@@ -38,11 +39,4 @@ class Person < Nameable
   def correct_name
     @name
   end
-
-  person = Person.new(22, 'maximilianus')
-  person.correct_name
-  capitalized_person = CapitalizeDecorator.new(person)
-  capitalized_person.correct_name
-  capitalized_trimmed_person = TrimmerDecorator.new(capitalized_person)
-  capitalized_trimmed_person.correct_name
 end
