@@ -1,10 +1,12 @@
+require 'pry'
 require_relative 'book'
 require_relative 'teacher'
 require_relative 'student'
 require_relative 'rental'
 
 def list_books
-  puts 'List of books:'
+  puts 'List of book:'
+  binding.pry
   @books.each { |book| puts "Title: \"#{book.title}\", Author: #{book.author}" }
 end
 
