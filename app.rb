@@ -2,8 +2,9 @@ require_relative 'book'
 require_relative 'teacher'
 require_relative 'student'
 require_relative 'rental'
+require_relative 'user_inputs'
 
-def list_boo
+def list_books
   puts 'List of books:'
   @books.each { |book| puts "Title: \"#{book.title}\", Author: #{book.author}" }
 end

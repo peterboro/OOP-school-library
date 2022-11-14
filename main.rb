@@ -1,7 +1,8 @@
-require_relative 'app'
+require_relative 'user_inputs'
 
 def main
-  app = App.new
-  puts 'Welcome to School Library App!'
-  app.start
+  app = UserInputs.new
+  app.user_inputs
 end
+
+main
